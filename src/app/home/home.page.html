@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Welcome {{username}} !</ion-title>
+    <ion-buttons class="log-out" slot="end" (click)="logOut()">
+      <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar style="--background:#e5dbda; ">
+    <ion-searchbar animated [(ngModel)]="firstName" (ngModelChange)="Search()"
+      placeholder="You have {{items.length}} contact">
+    </ion-searchbar>
+    <ion-button slot="end" (click)="presentModal()">Add New Person</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div *ngIf="!data2">
+    <ion-grid>
+      <ion-row class="content">
+        <ion-col *ngFor="let acc of items">
+          <ion-card>
+            <ion-item-sliding>
+              <ion-item>
+                <ion-avatar slot="start">
+                  <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-avatar>
+                <ion-label>
+                  <p>
+                    <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+                  </p>
+                  <p>
+                    <ion-skeleton-text animated style="width: 35%"></ion-skeleton-text>
+                  </p>
+                  <p>
+                    <ion-skeleton-text animated style="width: 35%"></ion-skeleton-text>
+                  </p>
+                </ion-label>
+              </ion-item>
+            </ion-item-sliding>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div *ngIf="data2">
+    <ion-grid>
+      <ion-row class="content">
+        <ion-col *ngFor="let acc of items">
+          <ion-card>
+            <ion-item-sliding>
+              <ion-item button lines="none" (click)="clickContact(acc.sn ,acc.name, acc.mobile)">
+                <ion-avatar slot="start">
+                  <img src="assets/icon/picture/face.jpg">
+                </ion-avatar>
+                <ion-label>
+                  <h2>{{acc.name}}</h2>
+                  <h3> number: {{acc.mobile}} </h3>
+                  <p> remark : {{acc.remark}} </p>
+                </ion-label>
+
+              </ion-item>
+              <div>
+                <ion-button (click)="clickContact(acc.sn ,acc.name, acc.mobile)">
+                  <ion-icon name="create-outline"></ion-icon>
+                </ion-button>
+                <ion-button color="danger" (click)="deleteConfirm(acc.sn ,acc.name)">
+                  <ion-icon name="trash"></ion-icon>
+                </ion-button>
+              </div>
+              <ion-item-options side="end" (ionSwipe)="deleteConfirm(acc.sn ,acc.name)">
+                <ion-item-option color="danger" expandable (click)="deleteConfirm(acc.sn ,acc.name)">
+                  Delete
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="presentModal()" class="ion-activatable ripple-parent">
+      <ion-icon name="add"></ion-icon>
+      <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

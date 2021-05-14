@@ -24,3 +24,41 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.secondary {
+    color: red !important; // for homepage cancel confirmation
+}
+
+
+
+ion-header{
+    --ion-background-color: #507dbc;
+}
+
+ion-content{
+    --background:#e5dbda;
+}
+
+ion-card{
+    --background: #a1c6ea;
+}
+
+ion-item{
+    --background: #a1c6ea;
+}
+
+ion-button{
+    --background: #003554;
+}
+
+ion-fab-button{
+    --background:#003554;
+}
+
+ion-title{
+    color: #bbd1ea;
+}
+
+.log-out{
+    color: #bbd1ea;
+}

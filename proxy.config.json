@@ -1,0 +1,11 @@
+{
+    "/tcserver": {
+        "target": "http://tcit-qa.tzuchi.net/TCLTCWeb/rs/contacts",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin":"true",
+        "pathRewrite":{
+            "^/tcserver":""
+        }
+    }
+}

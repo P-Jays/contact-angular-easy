@@ -1,5 +1,11 @@
 {
   "name": "pj",
   "integrations": {},
-  "type": "angular"
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://tcit-qa.tzuchi.net/TCLTCWeb/rs/contacts"
+    }
+  ]
 }

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>addnewcontact</ion-title>
+    <ion-buttons slot="end" (click)="closeModal()">
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">Name</ion-label>
+            <ion-input placeholder="黃健霖" [(ngModel)]="addName"></ion-input>
+          </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">Mobile</ion-label>
+            <ion-input placeholder="09123123888" [(ngModel)]="addMobile"></ion-input>
+          </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">Home</ion-label>
+            <ion-input placeholder="0388888898" [(ngModel)]="addHome"></ion-input>
+          </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">Address</ion-label>
+            <ion-input placeholder="花蓮縣花蓮市建國路2段880號" [(ngModel)]="addAddress"></ion-input>
+          </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">Remark</ion-label>
+            <ion-input placeholder="親愛的~ 不重要不要打過來喔~" [(ngModel)]="addRemark"></ion-input>
+          </ion-item>
+        </ion-card>
+        <br>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="addToContact(addName,addMobile,addHome,addAddress,addRemark)">Save to
+          Contact</ion-button>
+        <!-- <buttons (click)="presentToast()" >Test</buttons> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

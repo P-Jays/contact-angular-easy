@@ -1,0 +1,57 @@
+ion-searchbar {
+    
+    --background: #bbd1ea;
+}
+
+
+
+.content {
+    display: grid;
+
+}
+
+ion-button {
+    display: none;
+}
+
+@media screen and (min-width:540px) {
+    .content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    div ion-button {
+        padding-left: 15px;
+        text-align: center;
+        width: 45%;
+        display: inline-block;
+    }
+
+    ion-button {
+        display: block;
+    }
+
+    ion-fab-button {
+        display: none;
+    }
+}
+
+@media screen and (min-width:760px) {
+    .content {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+
+
+
+
+
+
+
+
+// @-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}
+// ion-card{
+//     -webkit-animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both;animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both
+// }

@@ -1,0 +1,78 @@
+<ion-header>
+ 
+  <ion-toolbar>
+    <h1>
+      {{editName}} Profile
+    </h1>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goHome()">Back</ion-back-button>
+    </ion-buttons>
+   
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="text-align: left;">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>{{editSn}} </ion-card-subtitle>
+            <ion-card-title>{{editName}} </ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="text-align: left;">
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">First Name</ion-label>
+            <ion-input [(ngModel)]="profile.name"> </ion-input>
+          </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">Mobile </ion-label>
+            <ion-input [(ngModel)]="profile.mobile"> </ion-input>
+          </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">Home </ion-label>
+            <ion-input [(ngModel)]="profile.homePhone"> </ion-input>
+          </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">Address</ion-label>
+            <ion-input [(ngModel)]="profile.address"></ion-input>
+          </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-item>
+            <ion-label position="stacked">Remark</ion-label>
+            <ion-input [(ngModel)]="profile.remark"></ion-input>
+          </ion-item>
+        </ion-card>
+
+       
+          
+          <ion-button class="change" expand="full"
+            (click)="saveChange(profile.sn, profile.name, profile.mobile, profile.homePhone, profile.address, profile.remark)">
+            Save Change
+          </ion-button>
+          <ion-button class="delete" expand="full" (click)="deleteConfirm(profile.sn) ">Delete</ion-button>
+          <ion-button class="cancel" expand="full" (click)="goHome()">cancel</ion-button>
+        
+        
+
+
+
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

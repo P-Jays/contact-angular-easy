@@ -1,0 +1,22 @@
+.btn-center-align{
+    padding-top: 50px;
+    --text-align: center;
+}
+a{
+    padding-left: 15px ; 
+}
+// ion-content{
+//      --background: linear-gradient( 135deg, #92FFC0 10%, #002661 100%);
+// }
+
+h1{
+    font-family: utopia-std-headline,serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #a1c6ea;
+}
+
+@-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}
+ion-card{
+    -webkit-animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both;animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both
+}

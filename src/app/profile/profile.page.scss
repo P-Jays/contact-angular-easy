@@ -1,0 +1,50 @@
+.delete{
+    --background:#f44e3f;
+}
+
+ion-header{
+    --ion-background-color: #bbd1ea;
+}
+
+.cancel{
+    --background:#ffff;
+    color: #000;
+    display: none;
+}
+
+@media screen and (min-width:540px) {
+    ion-header{
+        --ion-background-color: #507dbc;
+    }
+
+    ion-buttons{
+        display: none;
+    }
+    .cancel{
+        display: block;
+    }
+ 
+}
+
+@media screen and (min-width:760px) {
+    ion-header{
+        --ion-background-color: #507dbc;
+    }
+
+    ion-buttons{
+        display: none;
+    }
+
+    .cancel{
+        display: block;
+    }
+}
+
+
+
+
+
+// @-webkit-keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes scale-up-center{0%{-webkit-transform:scale(.5);transform:scale(.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}
+// ion-card{
+//     -webkit-animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both;animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both
+// }

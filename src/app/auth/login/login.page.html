@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <link rel="stylesheet" href="https://use.typekit.net/lxj8vle.css">
+    <h1 style="text-align: center;">TCUST Contact Data </h1>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid style="padding-top: 15px;">
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <div *ngIf=!errorMes>
+          <ion-text color="danger" style="text-align: center;">
+            <h4>{{errorMessage}}</h4>
+          </ion-text>
+        </div>
+        <ion-card>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="floating">
+                <ion-icon name="person"></ion-icon>
+              </ion-label>
+              <ion-input placeholder="Username" [(ngModel)]="username" type="text" required>
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">
+                <ion-icon name="lock-closed"></ion-icon>
+              </ion-label>
+              <ion-input placeholder="Password" [(ngModel)]="password" type="Password" required>
+              </ion-input>
+            </ion-item>
+            <div class="btn-center-align" style="text-align: center;">
+              <ion-button shape="round" (click)="login()">
+                Sign in
+              </ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
